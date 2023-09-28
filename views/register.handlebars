@@ -1,0 +1,115 @@
+﻿{{>nav-register}}
+
+<div class="columns">
+  <div class="column is-two-thirds">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <div class="field is-horizontal">
+            <!-- First Name -->
+            <div class="field-label is-normal">
+              <label class="label">Enter</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input is-danger" id="firstname" type="text" placeholder="Name">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <!-- Last Name -->
+              <div class="field">
+                <p class="control is-expanded has-icons-left has-icons-right">
+                  <input class="input is-danger" type="text" id="lastname" placeholder="Last name" value="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Type of Use Dropdown -->
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Type of use</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-narrow">
+                <div class="control">
+                  <div class="select is-fullwidth is-danger">
+                    <select>
+                      <option>Select type</option>
+                      <option>Personal</option>
+                      <option>Business</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">E-mail</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-danger" type="email" id="email" placeholder="example: trackSaver@gmail.com">
+                </div>
+                <p class="help is-danger">
+                  This field is required*
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Choose a password</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-danger" type="password" id="password" placeholder="*****">
+                </div>
+                <p class="help is-danger">
+                  This field is required*
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="field is-horizontal">
+            <div class="field-label">
+              <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <button class="button is-primary is-danger" id="submit">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer2" class="column"></div>
+  <div class="column"></div>
+</div>
+
+<!-- Include your JavaScript file -->
+<script src="/js/register.js"></script>

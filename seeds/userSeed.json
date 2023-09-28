@@ -1,0 +1,28 @@
+[
+    {
+     
+      "firstname":"sam",
+      "lastname": "rains",
+      "email":"sam@sam.com",
+      "password":"password"
+
+    },
+
+    {
+        
+        "firstname":"amy",
+        "lastname":"jask",
+        "email":"amy@amy.com",
+        "password":"password"
+  
+      },
+      {
+        
+        "firstname":"ken",
+        "lastname":"park",
+        "email":"ken@ken.com",
+        "password":"password"
+  
+      }
+
+  ]

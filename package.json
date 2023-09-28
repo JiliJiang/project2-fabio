@@ -1,0 +1,28 @@
+{
+  "name": "track_saver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js",
+    "start": "node server.js",
+    "seed": " node seeds/seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.3.5",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "sequelize": "^6.8.0",
+    "sweetalert2": "^11.7.31",
+    "uuid": "^9.0.1"
+  }
+}

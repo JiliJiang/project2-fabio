@@ -1,0 +1,127 @@
+﻿   {{> nav-dash}}
+<div class="columns">
+    <div class="column is-one-third">
+    <div id = "mainCards">
+      <div class="cardYT card">
+        <div class="card-content">
+          <!-- Search Display -->
+          <div class="field">
+            <h4 class="title is-5 has-text-grey-dark">CALENDAR 2023</h4>
+          </div>
+
+
+          <div id="month">
+          <button class="button is-medium is-fullwidth is-danger is-outlined" data-value="January">January</button>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined" data-value="February">February</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="March">March</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="April">April</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="May">May</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="June">June</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="July">July</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="August">August</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="September">September</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="October">Octuber</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="November">November</button></p>
+          <p class="pt-1"><button class="button is-medium is-fullwidth is-danger is-outlined"data-value="December">December</button></p>
+            </div>
+            </div>
+          </div>
+            </div>
+              <div>
+              </div>
+            </div>
+    
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <!-- Display income, expenses, and net income -->
+                        <div class="level is-mobile">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">Income</p>
+                                    <p class="income" id="income">0.00</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">Expenses</p>
+                                    <p class="expenses" id="expenses">0.00</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">Net Income</p>
+                                    <p class="net" id="net">0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Expense form -->
+                        <div id="expense-form-container">
+                            <form id="expense-form">
+                                <div class="select is-danger">
+                                    <select id="transaction-type">
+                                        <option>Select Transaction Type</option>
+                                        <option value="Income">Income</option>
+                                        <option value="Expense">Expense</option>
+                                    </select>
+                                </div>
+                                <div class="select is-danger" id="space">
+                                    <select id="transaction-category">
+                                        <option disabled selected>Select Transaction Category</option>
+                                        <option value="Rent">Rent</option>
+                                        <option value="Credit Card">Credit Card</option>
+                                        <option value="Utilities">Utilities</option>
+                                        <option value="Food">Food</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <div class="field has-addons has-addons-centered">
+                                    <p class="control">
+                                        <span class="select is-danger">
+                                            <select id="currency">
+                                                <option>$</option>
+                                                <!-- Add more currency options as needed -->
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p class="control is-danger">
+                                        <input class="input is-danger" type="number" placeholder="Amount of money" id="transaction-amount">
+                                    </p>
+                                    <p class="control">
+                                        <button class="button is-primary is-danger" id="save-expense-button">
+                                            Save
+                                        </button>
+                                    </p>
+                                </div>
+                                  <script id="transaction-template" type="text/x-handlebars-template">
+                                      {{#each transactions}}
+                                      <li>{{type}}: {{category}} - {{amount}}</li>
+                                      {{/each}}
+                                  </script>
+                                <hr>
+                                <!-- Transaction history -->
+                                <div class="transaction-history">
+                                    <h4 class="title is-5">New Transaction</h4>
+                                    <ul id="transaction-list">
+                                        <!-- Transaction entries will be added here dynamically using JavaScript -->
+                                    </ul>
+                                    <h4 class="title is-5">Transaction History</h4>
+                                    <ul id="transaction-history">
+                                        <!-- Transaction entries will be added here dynamically using JavaScript -->
+                                    </ul>
+                                </div>
+                                <hr>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Handlebars library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <!-- Include your JavaScript file at the end of the body -->
+    <script src="./js/expense.js"></script>
